@@ -13,6 +13,7 @@ This is an automatically generated documentation for **PHP OpenStreetMap Static 
 
 | Class | Description |
 |---    |---          |
+| [FrenchCadastralMap](./classes/DantSu/FrenchCadastralMapStaticAPI/FrenchCadastralMap.md) | DantSu\FrenchCadastralMapStaticAPI\FrenchCadastralMap is a PHP library created for easily get static image from French Cadastral Government map with markers and lines.|
 | [LatLng](./classes/DantSu/FrenchCadastralMapStaticAPI/LatLng.md) | DantSu\FrenchCadastralMapStaticAPI\LatLng define latitude and longitude for map, lines, markers.|
 | [Line](./classes/DantSu/FrenchCadastralMapStaticAPI/Line.md) | DantSu\FrenchCadastralMapStaticAPI\Line draw line on the map.|
 | [Markers](./classes/DantSu/FrenchCadastralMapStaticAPI/Markers.md) | DantSu\FrenchCadastralMapStaticAPI\Markers display markers on the map.|

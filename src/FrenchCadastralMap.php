@@ -33,11 +33,11 @@ class FrenchCadastralMap extends OpenStreetMap
      */
     private $insee;
     /**
-     * @var [] Selected layers
+     * @var string[] Selected layers
      */
     private $layers = [];
     /**
-     * @var boolean is displaying Open Street Map
+     * @var bool is displaying Open Street Map
      */
     private $displayOpenStreetMap = false;
 
@@ -57,18 +57,18 @@ class FrenchCadastralMap extends OpenStreetMap
     }
 
     /**
-     * Define cadastral layers to display
+     * Define cadastral layers to display.
      * @param string[] $layers Array of constants `FrenchCadastralMap::LAYER_...`
      * @return $this Fluent interface
      */
-    public function setLayers($layers): FrenchCadastralMap
+    public function setLayers(array $layers): FrenchCadastralMap
     {
         $this->layers = $layers;
         return $this;
     }
 
     /**
-     * Display or not OpenStreetMap in background
+     * Display or not OpenStreetMap in background.
      * @param bool $displayOpenStreetMap Set true to display OpenStreetMap in background
      * @return $this Fluent interface
      */
@@ -80,7 +80,6 @@ class FrenchCadastralMap extends OpenStreetMap
 
     /**
      * Get only the map image.
-     *
      * @see https://github.com/DantSu/php-image-editor See more about DantSu\PHPImageEditor\Image
      * @return Image An instance of DantSu\PHPImageEditor\Image
      */
@@ -116,4 +115,5 @@ class FrenchCadastralMap extends OpenStreetMap
 
         return $image;
     }
+
 }

@@ -19,6 +19,7 @@ header('Content-type: image/png');
         FrenchCadastralMap::LAYER_VOIE_COMMUNICATION,
         // FrenchCadastralMap::LAYER_LIEUDIT
     ])
+    ->setDisplayOpenStreetMap(true)
     ->addMarkers(
         (new Markers(__DIR__ . '/resources/marker.png'))
             ->addMarker(new LatLng(44.351933, 2.568113))

@@ -26,6 +26,19 @@ use \DantSu\FrenchCadastralMapStaticAPI\Markers;
 
 header('Content-type: image/png');
 (new FrenchCadastralMap(12202, new LatLng(44.351933, 2.568113), 18, 600, 400))
+    ->setLayers([
+        FrenchCadastralMap::LAYER_AMORCES_CAD,
+        FrenchCadastralMap::LAYER_CADASTRAL_PARCEL,
+        FrenchCadastralMap::LAYER_SUBFISCAL,
+        // FrenchCadastralMap::LAYER_CLOTURE,
+        FrenchCadastralMap::LAYER_DETAIL_TOPO,
+        FrenchCadastralMap::LAYER_HYDRO,
+        FrenchCadastralMap::LAYER_BUILDING,
+        FrenchCadastralMap::LAYER_BORNE_REPERE,
+        FrenchCadastralMap::LAYER_VOIE_COMMUNICATION,
+        // FrenchCadastralMap::LAYER_LIEUDIT
+    ])
+    ->setDisplayOpenStreetMap(true)
     ->addMarkers(
         (new Markers(__DIR__ . '/resources/marker.png'))
             ->addMarker(new LatLng(44.351933, 2.568113))
@@ -48,11 +61,10 @@ header('Content-type: image/png');
 
 | Class | Description |
 |---    |---          |
-| [BoundingBox](./docs/classes/DantSu/FrenchCadastralMapStaticAPI/BoundingBox.md) | DantSu\FrenchCadastralMapStaticAPI\BoundingBox define the bounding box of the static map.|
+| [FrenchCadastralMap](./docs/classes/DantSu/FrenchCadastralMapStaticAPI/FrenchCadastralMap.md) | DantSu\FrenchCadastralMapStaticAPI\FrenchCadastralMap is a PHP library created for easily get static image from French Cadastral Government map with markers and lines.|
 | [LatLng](./docs/classes/DantSu/FrenchCadastralMapStaticAPI/LatLng.md) | DantSu\FrenchCadastralMapStaticAPI\LatLng define latitude and longitude for map, lines, markers.|
 | [Line](./docs/classes/DantSu/FrenchCadastralMapStaticAPI/Line.md) | DantSu\FrenchCadastralMapStaticAPI\Line draw line on the map.|
 | [Markers](./docs/classes/DantSu/FrenchCadastralMapStaticAPI/Markers.md) | DantSu\FrenchCadastralMapStaticAPI\Markers display markers on the map.|
-| [OpenStreetMap](./docs/classes/DantSu/FrenchCadastralMapStaticAPI/OpenStreetMap.md) | DantSu\FrenchCadastralMapStaticAPI\BoundingBox define the bounding box of the static map.|
 | [XY](./docs/classes/DantSu/FrenchCadastralMapStaticAPI/XY.md) | DantSu\FrenchCadastralMapStaticAPI\XY define X and Y pixel position for map, lines, markers.|
 
 ## Contributing
