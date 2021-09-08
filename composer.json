@@ -1,0 +1,34 @@
+{
+  "name": "dantsu/french-cadastral-map-static-api",
+  "type": "library",
+  "description": "PHP library to easily get static image from French Cadastral Government map with markers and lines.",
+  "keywords": [
+    "php",
+    "cadastral",
+    "french",
+    "map",
+    "static",
+    "image",
+    "maps",
+    "api"
+  ],
+  "homepage": "https://github.com/DantSu/php-french-cadastral-map-static-api",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Franck ALARY",
+      "homepage": "https://github.com/DantSu",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": "^7.0",
+    "dantsu/php-image-editor": "^1.0",
+    "dantsu/php-osm-static-api": "^0.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "DantSu\\FrenchCadastralMapStaticAPI\\": "src/"
+    }
+  }
+}

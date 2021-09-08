@@ -1,0 +1,63 @@
+# PHP French Cadastral Map Static API
+
+PHP library to easily get static image from French Cadastral Government map with markers and lines.
+
+## ✨ Supporting
+
+⭐ Star this repository to support this project. You will contribute to increase the visibility of this library 🙂
+
+## Installation
+
+Install this library easily with composer :
+
+```cmd
+composer require dantsu/french-cadastral-map-static-api
+```
+
+## How to use
+
+Generate OpenStreetMap static image with marker and line :
+
+```php
+use \DantSu\FrenchCadastralMapStaticAPI\FrenchCadastralMap;
+use \DantSu\FrenchCadastralMapStaticAPI\LatLng;
+use \DantSu\FrenchCadastralMapStaticAPI\Line;
+use \DantSu\FrenchCadastralMapStaticAPI\Markers;
+
+header('Content-type: image/png');
+(new FrenchCadastralMap(12202, new LatLng(44.351933, 2.568113), 18, 600, 400))
+    ->addMarkers(
+        (new Markers(__DIR__ . '/resources/marker.png'))
+            ->addMarker(new LatLng(44.351933, 2.568113))
+    )
+    ->addLine(
+        (new Line('FF0000', 2))
+            ->addPoint(new LatLng(44.351172, 2.571092))
+            ->addPoint(new LatLng(44.352097, 2.570045))
+            ->addPoint(new LatLng(44.352665, 2.568107))
+            ->addPoint(new LatLng(44.352887, 2.566503))
+            ->addPoint(new LatLng(44.352806, 2.565972))
+            ->addPoint(new LatLng(44.351517, 2.565672))
+            ->addPoint(new LatLng(44.351172, 2.571092))
+    )
+    ->getImage()
+    ->displayPNG();
+```
+
+## Documentation
+
+| Class | Description |
+|---    |---          |
+| [BoundingBox](./docs/classes/DantSu/FrenchCadastralMapStaticAPI/BoundingBox.md) | DantSu\FrenchCadastralMapStaticAPI\BoundingBox define the bounding box of the static map.|
+| [LatLng](./docs/classes/DantSu/FrenchCadastralMapStaticAPI/LatLng.md) | DantSu\FrenchCadastralMapStaticAPI\LatLng define latitude and longitude for map, lines, markers.|
+| [Line](./docs/classes/DantSu/FrenchCadastralMapStaticAPI/Line.md) | DantSu\FrenchCadastralMapStaticAPI\Line draw line on the map.|
+| [Markers](./docs/classes/DantSu/FrenchCadastralMapStaticAPI/Markers.md) | DantSu\FrenchCadastralMapStaticAPI\Markers display markers on the map.|
+| [OpenStreetMap](./docs/classes/DantSu/FrenchCadastralMapStaticAPI/OpenStreetMap.md) | DantSu\FrenchCadastralMapStaticAPI\BoundingBox define the bounding box of the static map.|
+| [XY](./docs/classes/DantSu/FrenchCadastralMapStaticAPI/XY.md) | DantSu\FrenchCadastralMapStaticAPI\XY define X and Y pixel position for map, lines, markers.|
+
+## Contributing
+
+Please fork this repository and contribute back using pull requests.
+
+Any contributions, large or small, major features, bug fixes, are welcomed and appreciated but will be thoroughly reviewed.
+
