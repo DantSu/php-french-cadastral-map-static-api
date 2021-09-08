@@ -16,7 +16,7 @@ composer require dantsu/french-cadastral-map-static-api
 
 ## How to use
 
-Generate OpenStreetMap static image with marker and line :
+Generate French Cadastral map static image with marker and line :
 
 ```php
 use \DantSu\FrenchCadastralMapStaticAPI\FrenchCadastralMap;
