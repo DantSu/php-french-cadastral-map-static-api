@@ -5,8 +5,8 @@ use \DantSu\FrenchCadastralMapStaticAPI\LatLng;
 use \DantSu\FrenchCadastralMapStaticAPI\Line;
 use \DantSu\FrenchCadastralMapStaticAPI\Markers;
 
-header('Content-type: image/png');
-(new FrenchCadastralMap(12202, new LatLng(44.351933, 2.568113), 18, 600, 400))
+\header('Content-type: image/png');
+(new FrenchCadastralMap(12202, new LatLng(44.351933, 2.568113), 17, 600, 400))
     ->setLayers([
         FrenchCadastralMap::LAYER_AMORCES_CAD,
         FrenchCadastralMap::LAYER_CADASTRAL_PARCEL,
@@ -22,6 +22,7 @@ header('Content-type: image/png');
     ->setDisplayOpenStreetMap(true)
     ->addMarkers(
         (new Markers(__DIR__ . '/resources/marker.png'))
+            ->setAnchor(Markers::ANCHOR_CENTER, Markers::ANCHOR_BOTTOM)
             ->addMarker(new LatLng(44.351933, 2.568113))
     )
     ->addLine(
