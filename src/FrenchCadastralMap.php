@@ -37,7 +37,7 @@ class FrenchCadastralMap extends OpenStreetMap
      */
     private $layers = [];
     /**
-     * @var bool is displaying Open Street Map
+     * @var bool is displaying OpenStreetMap
      */
     private $displayOpenStreetMap = false;
 
@@ -78,12 +78,17 @@ class FrenchCadastralMap extends OpenStreetMap
         return $this;
     }
 
+    protected function getAttributionText()
+    {
+        return 'cadastre.gouv.fr' . ($this->displayOpenStreetMap ? ' - ' . parent::getAttributionText() : '');
+    }
+
     /**
      * Get only the map image.
      * @see https://github.com/DantSu/php-image-editor See more about DantSu\PHPImageEditor\Image
      * @return Image An instance of DantSu\PHPImageEditor\Image
      */
-    public function getMapImage(): Image
+    protected function getMapImage(): Image
     {
         $bbox = $this->getBoundingBox();
 
