@@ -1,5 +1,5 @@
-[![Packagist](https://img.shields.io/packagist/dt/DantSu/php-french-cadastral-map-static-api.svg)](https://packagist.org/packages/DantSu/php-french-cadastral-map-static-api)
-[![Latest Stable Version](https://poser.pugx.org/DantSu/php-french-cadastral-map-static-api/v/stable)](https://packagist.org/packages/DantSu/php-french-cadastral-map-static-api)
+[![Packagist](https://img.shields.io/packagist/dt/DantSu/french-cadastral-map-static-api.svg)](https://packagist.org/packages/DantSu/php-french-cadastral-map-static-api)
+[![Latest Stable Version](https://poser.pugx.org/DantSu/french-cadastral-map-static-api/v/stable)](https://packagist.org/packages/DantSu/php-french-cadastral-map-static-api)
 [![GitHub license](https://img.shields.io/github/license/DantSu/php-french-cadastral-map-static-api.svg)](https://github.com/DantSu/php-french-cadastral-map-static-api/blob/master/LICENSE)
 
 # PHP French Cadastral Map Static API
