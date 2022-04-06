@@ -90,14 +90,14 @@ class FrenchCadastralMap extends OpenStreetMap
      */
     protected function getMapImage(): Image
     {
-        $bbox = $this->getBoundingBox();
+        $mapData = $this->getMapData();
 
         if ($this->displayOpenStreetMap) {
             $image = parent::getMapImage();
         } else {
             $image =
-                Image::newCanvas($bbox->getOutputPxSize()->getX(), $bbox->getOutputPxSize()->getY())
-                    ->drawRectangle(0, 0, $bbox->getOutputPxSize()->getX(), $bbox->getOutputPxSize()->getY(), 'FFFFFF');
+                Image::newCanvas($mapData->getOutputSize()->getX(), $mapData->getOutputSize()->getY())
+                    ->drawRectangle(0, 0, $mapData->getOutputSize()->getX(), $mapData->getOutputSize()->getY(), 'FFFFFF');
         }
 
         $cadastralMap = new Image();
@@ -108,12 +108,12 @@ class FrenchCadastralMap extends OpenStreetMap
             'request=GetMap&' .
             'layers=' . \implode(',', \array_unique($this->layers)) . '&' .
             'styles=&' .
-            'width=' . $bbox->getOutputPxSize()->getX() . '&' .
-            'height=' . $bbox->getOutputPxSize()->getY() . '&' .
+            'width=' . $mapData->getOutputSize()->getX() . '&' .
+            'height=' . $mapData->getOutputSize()->getY() . '&' .
             'format=image/png&' .
             'transparent=true&' .
             'crs=EPSG:4326&' .
-            'bbox=' . $bbox->getBottomLeft()->getLat() . ',' . $bbox->getBottomLeft()->getLng() . ',' . $bbox->getTopRight()->getLat() . ',' . $bbox->getTopRight()->getLng()
+            'bbox=' . $mapData->getLatLngBottomLeft()->getLat() . ',' . $mapData->getLatLngBottomLeft()->getLng() . ',' . $mapData->getLatLngTopRight()->getLat() . ',' . $mapData->getLatLngTopRight()->getLng()
         )) {
             $image->pasteOn($cadastralMap);
         }
