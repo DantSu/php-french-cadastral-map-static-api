@@ -6,7 +6,7 @@ DantSu\FrenchCadastralMapStaticAPI\FrenchCadastralMap is a PHP library created f
 
 
 * Full name: `\DantSu\FrenchCadastralMapStaticAPI\FrenchCadastralMap`
-* Parent class: [OpenStreetMap](../../../classes.md)
+* Parent class: [OpenStreetMap](https://github.com/DantSu/php-osm-static-api/blob/master/src/OpenStreetMap.php)
 
 **See Also:**
 
@@ -35,7 +35,6 @@ DantSu\FrenchCadastralMapStaticAPI\FrenchCadastralMap is a PHP library created f
 - [__construct](#-__construct) 
 - [setLayers](#-setlayers) 
 - [setDisplayOpenStreetMap](#-setdisplayopenstreetmap) 
-- [getMapImage](#-getmapimage) 
 
 ### ->__construct
 
@@ -112,29 +111,7 @@ Display or not OpenStreetMap in background.
 
 
 ---
-### ->getMapImage
-
-Get only the map image.
-
-
-
-
-
-
-
-
-
-#### Return Value:
-
- **\DantSu\PHPImageEditor\Image** : An instance of DantSu\PHPImageEditor\Image
-
-
-#### See Also:
-
-* https://github.com/DantSu/php-image-editor - See more about DantSu\PHPImageEditor\Image
-
----
 
 
 ---
-> Automatically generated from source code comments on 2021-09-08 using [phpDocumentor](http://www.phpdoc.org/)
+> Automatically generated from source code comments on 2022-04-07 using [phpDocumentor](http://www.phpdoc.org/)

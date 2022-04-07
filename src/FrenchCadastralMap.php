@@ -78,7 +78,11 @@ class FrenchCadastralMap extends OpenStreetMap
         return $this;
     }
 
-    protected function getAttributionText()
+    /**
+     * Get attribution text
+     * @return string Attribution text
+     */
+    protected function getAttributionText(): string
     {
         return 'cadastre.gouv.fr' . ($this->displayOpenStreetMap ? ' - ' . parent::getAttributionText() : '');
     }
