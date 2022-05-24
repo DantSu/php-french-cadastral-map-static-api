@@ -6,7 +6,7 @@ DantSu\FrenchCadastralMapStaticAPI\Markers display markers on the map.
 
 
 * Full name: `\DantSu\FrenchCadastralMapStaticAPI\Markers`
-* Parent class: [Markers](https://github.com/DantSu/php-osm-static-api/blob/master/src/Markers.php)
+* Parent class: [Markers](../../../classes.md)
 
 **See Also:**
 
@@ -18,4 +18,4 @@ DantSu\FrenchCadastralMapStaticAPI\Markers display markers on the map.
 
 
 ---
-> Automatically generated from source code comments on 2022-04-07 using [phpDocumentor](http://www.phpdoc.org/)
+> Automatically generated from source code comments on 2022-05-24 using [phpDocumentor](http://www.phpdoc.org/)

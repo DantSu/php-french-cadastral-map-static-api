@@ -1,12 +1,12 @@
 
 # FrenchCadastralMap
 
-DantSu\FrenchCadastralMapStaticAPI\FrenchCadastralMap is a PHP library created for easily get static image from French Cadastral Government map with markers and lines.
+DantSu\FrenchCadastralMapStaticAPI\FrenchCadastralMap is a PHP library created for easily get static image from French Cadastral Government map with markers, lines, polygons and circles.
 
 
 
 * Full name: `\DantSu\FrenchCadastralMapStaticAPI\FrenchCadastralMap`
-* Parent class: [OpenStreetMap](https://github.com/DantSu/php-osm-static-api/blob/master/src/OpenStreetMap.php)
+* Parent class: [OpenStreetMap](../../../classes.md)
 
 **See Also:**
 
@@ -114,4 +114,4 @@ Display or not OpenStreetMap in background.
 
 
 ---
-> Automatically generated from source code comments on 2022-04-07 using [phpDocumentor](http://www.phpdoc.org/)
+> Automatically generated from source code comments on 2022-05-24 using [phpDocumentor](http://www.phpdoc.org/)

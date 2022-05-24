@@ -23,8 +23,8 @@
   ],
   "require": {
     "php": ">=7.0",
-    "dantsu/php-image-editor": "^1.0",
-    "dantsu/php-osm-static-api": "^0.2"
+    "dantsu/php-image-editor": "^1.1",
+    "dantsu/php-osm-static-api": "^0.3"
   },
   "autoload": {
     "psr-4": {

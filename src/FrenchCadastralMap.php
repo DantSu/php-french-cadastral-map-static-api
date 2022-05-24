@@ -6,7 +6,7 @@ use \DantSu\OpenStreetMapStaticAPI\OpenStreetMap;
 use \DantSu\PHPImageEditor\Image;
 
 /**
- * DantSu\FrenchCadastralMapStaticAPI\FrenchCadastralMap is a PHP library created for easily get static image from French Cadastral Government map with markers and lines.
+ * DantSu\FrenchCadastralMapStaticAPI\FrenchCadastralMap is a PHP library created for easily get static image from French Cadastral Government map with markers, lines, polygons and circles.
  *
  * @package DantSu\FrenchCadastralMapStaticAPI
  * @author Franck Alary

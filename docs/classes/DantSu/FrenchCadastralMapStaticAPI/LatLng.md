@@ -6,7 +6,7 @@ DantSu\FrenchCadastralMapStaticAPI\LatLng define latitude and longitude for map,
 ..
 
 * Full name: `\DantSu\FrenchCadastralMapStaticAPI\LatLng`
-* Parent class: [LatLng](https://github.com/DantSu/php-osm-static-api/blob/master/src/LatLng.php)
+* Parent class: [LatLng](../../../classes.md)
 
 **See Also:**
 
@@ -18,4 +18,4 @@ DantSu\FrenchCadastralMapStaticAPI\LatLng define latitude and longitude for map,
 
 
 ---
-> Automatically generated from source code comments on 2022-04-07 using [phpDocumentor](http://www.phpdoc.org/)
+> Automatically generated from source code comments on 2022-05-24 using [phpDocumentor](http://www.phpdoc.org/)

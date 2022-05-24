@@ -6,7 +6,7 @@ DantSu\FrenchCadastralMapStaticAPI\XY define X and Y pixel position for map, lin
 ..
 
 * Full name: `\DantSu\FrenchCadastralMapStaticAPI\XY`
-* Parent class: [XY](https://github.com/DantSu/php-osm-static-api/blob/master/src/XY.php)
+* Parent class: [XY](../../../classes.md)
 
 **See Also:**
 
@@ -18,4 +18,4 @@ DantSu\FrenchCadastralMapStaticAPI\XY define X and Y pixel position for map, lin
 
 
 ---
-> Automatically generated from source code comments on 2022-04-07 using [phpDocumentor](http://www.phpdoc.org/)
+> Automatically generated from source code comments on 2022-05-24 using [phpDocumentor](http://www.phpdoc.org/)

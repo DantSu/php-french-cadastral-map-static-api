@@ -78,10 +78,12 @@ use \DantSu\FrenchCadastralMapStaticAPI\Markers;
 
 | Class | Description |
 |---    |---          |
-| [FrenchCadastralMap](./docs/classes/DantSu/FrenchCadastralMapStaticAPI/FrenchCadastralMap.md) | DantSu\FrenchCadastralMapStaticAPI\FrenchCadastralMap is a PHP library created for easily get static image from French Cadastral Government map with markers and lines.|
+| [Circle](./docs/classes/DantSu/FrenchCadastralMapStaticAPI/Circle.md) | DantSu\FrenchCadastralMapStaticAPI\Circle draw circle on the map.|
+| [FrenchCadastralMap](./docs/classes/DantSu/FrenchCadastralMapStaticAPI/FrenchCadastralMap.md) | DantSu\FrenchCadastralMapStaticAPI\FrenchCadastralMap is a PHP library created for easily get static image from French Cadastral Government map with markers, lines, polygons and circles.|
 | [LatLng](./docs/classes/DantSu/FrenchCadastralMapStaticAPI/LatLng.md) | DantSu\FrenchCadastralMapStaticAPI\LatLng define latitude and longitude for map, lines, markers.|
 | [Line](./docs/classes/DantSu/FrenchCadastralMapStaticAPI/Line.md) | DantSu\FrenchCadastralMapStaticAPI\Line draw line on the map.|
 | [Markers](./docs/classes/DantSu/FrenchCadastralMapStaticAPI/Markers.md) | DantSu\FrenchCadastralMapStaticAPI\Markers display markers on the map.|
+| [Polygon](./docs/classes/DantSu/FrenchCadastralMapStaticAPI/Polygon.md) | DantSu\FrenchCadastralMapStaticAPI\Polygon draw polygon on the map.|
 | [XY](./docs/classes/DantSu/FrenchCadastralMapStaticAPI/XY.md) | DantSu\FrenchCadastralMapStaticAPI\XY define X and Y pixel position for map, lines, markers.|
 
 ## Contributing
