@@ -10,7 +10,7 @@ Map source : [cadastre.gouv.fr](https://www.cadastre.gouv.fr/)
 
 # API PHP de Carte Statique du Cadastre Français
 
-Librairie PHP permettant d'extraire facilement des images de la carte du cadastre Français avec des markers et des tracés. 
+Librairie PHP permettant d'extraire facilement des images de la carte du cadastre Français avec des markers, des lignes, polygones and cercles. 
 
 Source de la carte : [cadastre.gouv.fr](https://www.cadastre.gouv.fr/)
 
