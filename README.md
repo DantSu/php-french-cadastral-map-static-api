@@ -4,7 +4,7 @@
 
 # PHP French Cadastral Map Static API
 
-PHP library to easily get static image from French Cadastral Government map with markers and lines.
+PHP library to easily get static image from French Cadastral Government map with markers, lines, polygons and circles.
 
 Map source : [cadastre.gouv.fr](https://www.cadastre.gouv.fr/)
 
