@@ -31,26 +31,31 @@ composer require dantsu/french-cadastral-map-static-api
 Generate French Cadastral map static image with marker and line :
 
 ```php
-use \DantSu\FrenchCadastralMapStaticAPI\FrenchCadastralMap;
-use \DantSu\FrenchCadastralMapStaticAPI\LatLng;
-use \DantSu\FrenchCadastralMapStaticAPI\Line;
-use \DantSu\FrenchCadastralMapStaticAPI\Markers;
+use \DantSu\OpenStreetMapStaticAPI\OpenStreetMap;
+use \DantSu\FrenchCadastralMapStaticAPI\FrenchCadastralTileLayer;
+use \DantSu\OpenStreetMapStaticAPI\LatLng;
+use \DantSu\OpenStreetMapStaticAPI\Polygon;
+use \DantSu\OpenStreetMapStaticAPI\Markers;
 
 \header('Content-type: image/png');
-(new FrenchCadastralMap(12202, new LatLng(44.351933, 2.568113), 17, 600, 400))
-    ->setLayers([
-        FrenchCadastralMap::LAYER_AMORCES_CAD,
-        FrenchCadastralMap::LAYER_CADASTRAL_PARCEL,
-        FrenchCadastralMap::LAYER_SUBFISCAL,
-        // FrenchCadastralMap::LAYER_CLOTURE,
-        FrenchCadastralMap::LAYER_DETAIL_TOPO,
-        FrenchCadastralMap::LAYER_HYDRO,
-        FrenchCadastralMap::LAYER_BUILDING,
-        FrenchCadastralMap::LAYER_BORNE_REPERE,
-        // FrenchCadastralMap::LAYER_VOIE_COMMUNICATION,
-        // FrenchCadastralMap::LAYER_LIEUDIT
-    ])
-    ->setDisplayOpenStreetMap(true)
+(new OpenStreetMap(new LatLng(44.351933, 2.568113), 17, 600, 400))
+    ->addLayer(
+        new FrenchCadastralTileLayer(
+            12202,
+            [
+                FrenchCadastralTileLayer::LAYER_AMORCES_CAD,
+                FrenchCadastralTileLayer::LAYER_CADASTRAL_PARCEL,
+                FrenchCadastralTileLayer::LAYER_SUBFISCAL,
+                // CadastralTileLayer::LAYER_CLOTURE,
+                FrenchCadastralTileLayer::LAYER_DETAIL_TOPO,
+                FrenchCadastralTileLayer::LAYER_HYDRO,
+                FrenchCadastralTileLayer::LAYER_BUILDING,
+                FrenchCadastralTileLayer::LAYER_BORNE_REPERE,
+                // CadastralTileLayer::LAYER_VOIE_COMMUNICATION,
+                // CadastralTileLayer::LAYER_LIEUDIT
+            ]
+        )
+    )
     ->addMarkers(
         (new Markers(__DIR__ . '/resources/marker.png'))
             ->setAnchor(Markers::ANCHOR_CENTER, Markers::ANCHOR_BOTTOM)
@@ -58,33 +63,28 @@ use \DantSu\FrenchCadastralMapStaticAPI\Markers;
             ->addMarker(new LatLng(44.351510, 2.570020))
             ->addMarker(new LatLng(44.351873, 2.566250))
     )
-    ->addLine(
-        (new Line('FF0000', 2))
+    ->addDraw(
+        (new Polygon('FF0000', 2, '00FF00CC'))
             ->addPoint(new LatLng(44.351172, 2.571092))
             ->addPoint(new LatLng(44.352097, 2.570045))
             ->addPoint(new LatLng(44.352665, 2.568107))
             ->addPoint(new LatLng(44.352887, 2.566503))
             ->addPoint(new LatLng(44.352806, 2.565972))
             ->addPoint(new LatLng(44.351517, 2.565672))
-            ->addPoint(new LatLng(44.351172, 2.571092))
     )
     ->getImage()
     ->displayPNG();
 ```
 
-![Exported French Cadastral image](./src/samples/resources/sample1.png)
+![Exported French Cadastral image](./src/samples/resources/sample_1.png)
 
 ## Documentation
 
 | Class | Description |
 |---    |---          |
-| [Circle](./docs/classes/DantSu/FrenchCadastralMapStaticAPI/Circle.md) | DantSu\FrenchCadastralMapStaticAPI\Circle draw circle on the map.|
-| [FrenchCadastralMap](./docs/classes/DantSu/FrenchCadastralMapStaticAPI/FrenchCadastralMap.md) | DantSu\FrenchCadastralMapStaticAPI\FrenchCadastralMap is a PHP library created for easily get static image from French Cadastral Government map with markers, lines, polygons and circles.|
-| [LatLng](./docs/classes/DantSu/FrenchCadastralMapStaticAPI/LatLng.md) | DantSu\FrenchCadastralMapStaticAPI\LatLng define latitude and longitude for map, lines, markers.|
-| [Line](./docs/classes/DantSu/FrenchCadastralMapStaticAPI/Line.md) | DantSu\FrenchCadastralMapStaticAPI\Line draw line on the map.|
-| [Markers](./docs/classes/DantSu/FrenchCadastralMapStaticAPI/Markers.md) | DantSu\FrenchCadastralMapStaticAPI\Markers display markers on the map.|
-| [Polygon](./docs/classes/DantSu/FrenchCadastralMapStaticAPI/Polygon.md) | DantSu\FrenchCadastralMapStaticAPI\Polygon draw polygon on the map.|
-| [XY](./docs/classes/DantSu/FrenchCadastralMapStaticAPI/XY.md) | DantSu\FrenchCadastralMapStaticAPI\XY define X and Y pixel position for map, lines, markers.|
+| [FrenchCadastralTileLayer](./classes/DantSu/FrenchCadastralMapStaticAPI/FrenchCadastralTileLayer.md) | DantSu\FrenchCadastralMapStaticAPI\FrenchCadastralTileLayer define french cadastral tile server and related configuration|
+
+For more documentation, see [DantSu/php-osm-static-api](https://github.com/DantSu/php-osm-static-api)
 
 ## Contributing
 
